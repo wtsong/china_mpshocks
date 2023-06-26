@@ -18,15 +18,3 @@ Updated on: December 2021
   | shock_1y   | Monetary shocks constructed using 1-year IRS on the 7-day repo | float |
   | shock_5y   | Monetary shocks constructed using 5-year IRS on the 7-day repo | float |
   | isMain     | Indicator variable of the main measure of shocks | boolean |
-
-### Examples
-- The following Python code replicates Figure 2 in the paper:
-
-  ```
-  import pandas as pd
-  import matplotlib.pyplot as plt
-
-  df = pd.read_csv('china_mpshocks.csv')
-  df['date'] = pd.to_datetime(df['date'])
-  plt.plot(df['date'], df['shock_1y'], df['date'], df['shock_5y'])
-  ```
